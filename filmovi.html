@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmovi</title>
+    <link rel="stylesheet" href="filmovi.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+			<img src="logowp.png" alt="KINO">
+				</div>
+                <nav>
+                    <ul>
+                        <li><a href="filmovi.html">Filmovi</a></li>
+                        <li><a href="raspored.html">Raspored</a></li>
+                        <li><a href="sala.html">Sala</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <input type="text" id="pretraga" placeholder="Pretraži filmove..." oninput="pretraziFilmove(this.value)">
+                </div>
+                <h1>FILMOVI</h1>
+                <div class="top-bar-right">
+                    <select id="kategorije" onchange="scrollToSection(this.value)">
+                        <option value="">Kategorije</option>
+                        <option value="akcija">Akcija</option>
+                        <option value="drama">Drama</option>
+                        <option value="komedija">Komedija</option>
+                        <option value="animirani">Animirani</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section id="akcija" class="genre-section">
+                <h2 class="genre-title">Akcija</h2>
+                <div class="movie-grid">
+                    <div class="movie-card u-kinima">
+                        <img src="https://placehold.co/200x280/e74c3c/ffffff?text=RED" alt="Red">
+                        <p class="movie-title">Red</p>
+                        <p class="movie-duration">1h 51min</p>
+                    </div>
+                    <div class="movie-card u-kinima">
+                        <img src="https://placehold.co/200x280/c0392b/ffffff?text=Iron+Man+3" alt="Iron Man 3">
+                        <p class="movie-title">Iron Man 3</p>
+                        <p class="movie-duration">2h 10min</p>
+                    </div>
+                    <div class="movie-card uskoro">
+                        <img src="https://placehold.co/200x280/2980b9/ffffff?text=F1" alt="F1: The Movie">
+                        <p class="movie-title">F1: The Movie</p>
+                        <p class="movie-duration">2h 35min</p>
+                    </div>
+                    <div class="movie-card u-kinima">
+                        <img src="https://placehold.co/200x280/e67e22/ffffff?text=Mad+Max" alt="Mad Max">
+                        <p class="movie-title">Mad Max: Fury Road</p>
+                        <p class="movie-duration">2h 0min</p>
+                    </div>
+                    <div class="movie-card nije-u-ponudi">
+                        <img src="https://placehold.co/200x280/7f8c8d/ffffff?text=Mission" alt="Mission: Impossible">
+                        <p class="movie-title">Mission: Impossible</p>
+                        <p class="movie-duration">2h 43min</p>
+                    </div>
+                    <div class="movie-card uskoro">
+                        <img src="https://placehold.co/200x280/1a5276/ffffff?text=Thunderbolts" alt="Thunderbolts">
+                        <p class="movie-title">Thunderbolts</p>
+                        <p class="movie-duration">2h 7min</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="legenda">
+                <span class="legenda-item"><span class="legenda-box u-kinima-box"></span> Trenutno u kinima</span>
+                <span class="legenda-item"><span class="legenda-box uskoro-box"></span> Uskoro u kinima</span>
+                <span class="legenda-item"><span class="legenda-box nije-u-ponudi-box"></span> Više nije u ponudi</span>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
