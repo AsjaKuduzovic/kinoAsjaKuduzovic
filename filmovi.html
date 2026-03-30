@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="bs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmovi</title>
     <link rel="stylesheet" href="filmovi.css">
 </head>
-
 <body>
+
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo"> <img src="logowp.png" alt="KINO"> </div>
+                <div class="logo">
+			<img src="logowp.png" alt="KINO">
+				</div>
                 <nav>
                     <ul>
                         <li><a href="filmovi.html">Filmovi</a></li>
@@ -23,196 +24,188 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="container">
             <div class="top-bar">
-                <div class="top-bar-left"> <input type="text" id="pretraga" placeholder="Pretraži filmove..."
-                        oninput="pretraziFilmove(this.value)"> </div>
+                <div class="top-bar-left">
+                    <input type="text" id="pretraga" placeholder="Pretraži filmove..." oninput="pretraziFilmove(this.value)">
+                </div>
                 <h1>FILMOVI</h1>
-                <div class="top-bar-right"> <select id="kategorije" onchange="scrollToSection(this.value)">
+                <div class="top-bar-right">
+                    <select id="kategorije" onchange="scrollToSection(this.value)">
                         <option value="">Kategorije</option>
                         <option value="akcija">Akcija</option>
                         <option value="drama">Drama</option>
                         <option value="komedija">Komedija</option>
                         <option value="animirani">Animirani</option>
-                    </select> </div>
+                    </select>
+                </div>
             </div>
         </div>
+
         <div class="container">
             <section id="akcija" class="genre-section">
                 <h2 class="genre-title">Akcija</h2>
                 <div class="movie-grid">
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Red"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BMzg2Mjg1OTk0NF5BMl5BanBnXkFtZTcwMjQ4MTA3Mw@@._V1_.jpg"
-                            alt="Red">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMzg2Mjg1OTk0NF5BMl5BanBnXkFtZTcwMjQ4MTA3Mw@@._V1_.jpg" alt="Red">
                         <p class="movie-title">Red</p>
                         <p class="movie-duration">1h 51min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Iron Man 3"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_FMjpg_UX1000_.jpg"
-                            alt="Iron Man 3">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_FMjpg_UX1000_.jpg" alt="Iron Man 3">
                         <p class="movie-title">Iron Man 3</p>
                         <p class="movie-duration">2h 10min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="F1: The Movie"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BNGI0MDI4NjEtOWU3ZS00ODQyLWFhYTgtNGYxM2ZkM2Q2YjE3XkEyXkFqcGc@._V1_.jpg"
-                            alt="F1: The Movie">
+                    <div class="movie-card uskoro">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGI0MDI4NjEtOWU3ZS00ODQyLWFhYTgtNGYxM2ZkM2Q2YjE3XkEyXkFqcGc@._V1_.jpg" alt="F1: The Movie">
                         <p class="movie-title">F1: The Movie</p>
                         <p class="movie-duration">2h 35min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Mad Max"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_.jpg"
-                            alt="Mad Max: Fury Road">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_.jpg" alt="Mad Max: Fury Road">
                         <p class="movie-title">Mad Max: Fury Road</p>
                         <p class="movie-duration">2h 0min</p>
                     </div>
-                    <div class="movie-card nije-u-ponudi"> <img src="slika.jpg" alt="Mission: Impossible"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BN2U4OTdmM2QtZTkxYy00ZmQyLTg2N2UtMDdmMGJmNDhlZDU1XkEyXkFqcGc@._V1_.jpg"
-                            alt="Mission: Impossible">
+                    <div class="movie-card nije-u-ponudi">
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2U4OTdmM2QtZTkxYy00ZmQyLTg2N2UtMDdmMGJmNDhlZDU1XkEyXkFqcGc@._V1_.jpg" alt="Mission: Impossible">
                         <p class="movie-title">Mission: Impossible</p>
                         <p class="movie-duration">2h 43min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="Thunderbolts"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BYWE2NmNmYTItZGY0ZC00MmY2LTk1NDAtMGUyMGEzMjcxNWM0XkEyXkFqcGc@._V1_.jpg"
-                            alt="Thunderbolts">
+                    <div class="movie-card uskoro">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYWE2NmNmYTItZGY0ZC00MmY2LTk1NDAtMGUyMGEzMjcxNWM0XkEyXkFqcGc@._V1_.jpg" alt="Thunderbolts">
                         <p class="movie-title">Thunderbolts</p>
                         <p class="movie-duration">2h 7min</p>
                     </div>
                 </div>
             </section>
         </div>
+
         <div class="container">
             <section id="drama" class="genre-section">
                 <h2 class="genre-title">Drama</h2>
                 <div class="movie-grid">
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Scarface"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/7/71/Scarface_-_1983_film.jpg"
-                            alt="Scarface">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Scarface_-_1983_film.jpg" alt="Scarface">
                         <p class="movie-title">Scarface</p>
                         <p class="movie-duration">2h 45min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="The Notebook"> <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgd55ObXtv-Ah4zZHOEaQOkJA5D4Hk6X-mQ&s"
-                            alt="The Notebook">
+                    <div class="movie-card u-kinima">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgd55ObXtv-Ah4zZHOEaQOkJA5D4Hk6X-mQ&s" alt="The Notebook">
                         <p class="movie-title">The Notebook</p>
                         <p class="movie-duration">2h 1min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Magnolia"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/4/4b/Magnolia_poster.png" alt="Magnolia">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Magnolia_poster.png" alt="Magnolia">
                         <p class="movie-title">Magnolia</p>
                         <p class="movie-duration">3h 8min</p>
                     </div>
-                    <div class="movie-card nije-u-ponudi"> <img src="slika.jpg" alt="Casablanca"> <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/b/b3/CasablancaPoster-Gold.jpg"
-                            alt="Casablanca">
+                    <div class="movie-card nije-u-ponudi">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/CasablancaPoster-Gold.jpg" alt="Casablanca">
                         <p class="movie-title">Casablanca</p>
                         <p class="movie-duration">1h 42min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="Eyes Wide Shut"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/7/73/Eyes_Wide_Shut_%281999%29.png"
-                            alt="Eyes Wide Shut">
+                    <div class="movie-card uskoro">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Eyes_Wide_Shut_%281999%29.png" alt="Eyes Wide Shut">
                         <p class="movie-title">Eyes Wide Shut</p>
                         <p class="movie-duration">2h 39min</p>
                     </div>
                 </div>
             </section>
         </div>
+
         <div class="container">
             <section id="komedija" class="genre-section">
                 <h2 class="genre-title">Komedija</h2>
                 <div class="movie-grid">
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="Dumb and Dumber"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BNGQxZDA1MmMtYWQ1Ni00NTJmLTljMjgtZWVmODllODVhMzgyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="Dumb and Dumber">
+                    <div class="movie-card uskoro">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGQxZDA1MmMtYWQ1Ni00NTJmLTljMjgtZWVmODllODVhMzgyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Dumb and Dumber">
                         <p class="movie-title">Dumb and Dumber</p>
                         <p class="movie-duration">1h 47min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="White Chicks"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/2/2b/White_chicks.jpg" alt="White Chicks">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/White_chicks.jpg" alt="White Chicks">
                         <p class="movie-title">White Chicks</p>
                         <p class="movie-duration">1h 49min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Clueless"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BMTgwYjQ1NDktOTcwNi00MWZhLTliYWQtZDg5NjZhY2U5ZTNlXkEyXkFqcGc@._V1_QL75_UX190_CR0,1,190,281_.jpg"
-                            alt="Clueless">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTgwYjQ1NDktOTcwNi00MWZhLTliYWQtZDg5NjZhY2U5ZTNlXkEyXkFqcGc@._V1_QL75_UX190_CR0,1,190,281_.jpg" alt="Clueless">
                         <p class="movie-title">Clueless</p>
                         <p class="movie-duration">1h 37min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Legally Blonde"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Legally_Blonde_film_poster.png/250px-Legally_Blonde_film_poster.png"
-                            alt="Legally Blonde">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Legally_Blonde_film_poster.png/250px-Legally_Blonde_film_poster.png" alt="Legally Blonde">
                         <p class="movie-title">Legally Blonde</p>
                         <p class="movie-duration">1h 36min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="Ghostbusters"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BZjNhMzU5MjgtY2VhMC00NzZmLTk1YTEtMDc5OGU1OWJiMTE4XkEyXkFqcGc@._V1_.jpg"
-                            alt="Ghostbusters">
+                    <div class="movie-card uskoro">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZjNhMzU5MjgtY2VhMC00NzZmLTk1YTEtMDc5OGU1OWJiMTE4XkEyXkFqcGc@._V1_.jpg" alt="Ghostbusters">
                         <p class="movie-title">Ghostbusters</p>
                         <p class="movie-duration">1h 45min</p>
                     </div>
-                    <div class="movie-card nije-u-ponudi"> <img src="slika.jpg" alt="Wedding Crashers"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BYzQwNmU0NGEtZjlmYy00ZjQ5LTlmMWYtODY3YzI4NTdiYzA4XkEyXkFqcGc@._V1_.jpg"
-                            alt="Wedding Crashers">
+                    <div class="movie-card nije-u-ponudi">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzQwNmU0NGEtZjlmYy00ZjQ5LTlmMWYtODY3YzI4NTdiYzA4XkEyXkFqcGc@._V1_.jpg" alt="Wedding Crashers">
                         <p class="movie-title">Wedding Crashers</p>
                         <p class="movie-duration">1h 59min</p>
                     </div>
                 </div>
             </section>
         </div>
+
         <div class="container">
             <section id="animirani" class="genre-section">
                 <h2 class="genre-title">Animirani</h2>
                 <div class="movie-grid">
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Luca"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BMWMyNGNlZTktODVkNS00ZmMyLTk0NmUtNWVjOWU1MWMzZGMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="Luca">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMWMyNGNlZTktODVkNS00ZmMyLTk0NmUtNWVjOWU1MWMzZGMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Luca">
                         <p class="movie-title">Luca</p>
                         <p class="movie-duration">1h 35min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Tangled"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Tangled_poster.jpg/250px-Tangled_poster.jpg"
-                            alt="Tangled">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Tangled_poster.jpg/250px-Tangled_poster.jpg" alt="Tangled">
                         <p class="movie-title">Tangled</p>
                         <p class="movie-duration">1h 40min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="One Hundred and One Dalmatians"> <img
-                            src="https://m.media-amazon.com/images/I/81TDd2PNTXL._AC_UF894,1000_QL80_.jpg"
-                            alt="One Hundred and One Dalmatians">
+                    <div class="movie-card uskoro">
+                        <img src="https://m.media-amazon.com/images/I/81TDd2PNTXL._AC_UF894,1000_QL80_.jpg" alt="One Hundred and One Dalmatians">
                         <p class="movie-title">One Hundred and One Dalmatians</p>
                         <p class="movie-duration">1h 19min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="The Princess and the Frog"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BOTE3YTExYTEtOTUxZC00OTM0LWJmYmItMDk5YjczNmIwNzA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-                            alt="The Princess and the Frog">
+                    <div class="movie-card u-kinima">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTE3YTExYTEtOTUxZC00OTM0LWJmYmItMDk5YjczNmIwNzA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Princess and the Frog">
                         <p class="movie-title">The Princess and the Frog</p>
                         <p class="movie-duration">1h 37min</p>
                     </div>
-                    <div class="movie-card uskoro"> <img src="slika.jpg" alt="Tinker Bell"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/1/18/Tinker_Bell_DVD.jpg" alt="Tinker Bell">
+                    <div class="movie-card uskoro">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Tinker_Bell_DVD.jpg" alt="Tinker Bell">
                         <p class="movie-title">Tinker Bell</p>
                         <p class="movie-duration">1h 19min</p>
                     </div>
-                    <div class="movie-card nije-u-ponudi"> <img src="slika.jpg" alt="Puss in Boots"> <img
-                            src="https://m.media-amazon.com/images/M/MV5BOTQwMGU5YTEtYmQzMy00MTM0LWFhNzAtOGY2Yzc1MzBkYTYyXkEyXkFqcGc@._V1_.jpg"
-                            alt="Puss in Boots">
+                    <div class="movie-card nije-u-ponudi">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTQwMGU5YTEtYmQzMy00MTM0LWFhNzAtOGY2Yzc1MzBkYTYyXkEyXkFqcGc@._V1_.jpg" alt="Puss in Boots">
                         <p class="movie-title">Puss in Boots</p>
                         <p class="movie-duration">1h 30min</p>
                     </div>
-                    <div class="movie-card u-kinima"> <img src="slika.jpg" alt="Finding Nemo"> <img
-                            src="https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg" alt="Finding Nemo">
+                    <div class="movie-card u-kinima">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg" alt="Finding Nemo">
                         <p class="movie-title">Finding Nemo</p>
                         <p class="movie-duration">1h 40min</p>
                     </div>
                 </div>
             </section>
         </div>
+
     </main>
+
     <footer>
         <div class="container">
-            <div class="legenda"> <span class="legenda-item"><span class="legenda-box u-kinima-box"></span> Trenutno u
-                    kinima</span> <span class="legenda-item"><span class="legenda-box uskoro-box"></span> Uskoro u
-                    kinima</span> <span class="legenda-item"><span class="legenda-box nije-u-ponudi-box"></span> Više
-                    nije u ponudi</span> </div>
+            <div class="legenda">
+                <span class="legenda-item"><span class="legenda-box u-kinima-box"></span> Trenutno u kinima</span>
+                <span class="legenda-item"><span class="legenda-box uskoro-box"></span> Uskoro u kinima</span>
+                <span class="legenda-item"><span class="legenda-box nije-u-ponudi-box"></span> Više nije u ponudi</span>
+            </div>
         </div>
     </footer>
-</body>
+    </body>
+</html>
