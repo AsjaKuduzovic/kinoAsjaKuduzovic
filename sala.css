@@ -173,9 +173,6 @@ main {
     font-weight: bold;
 }
 
-.col-label-spacer {
-}
-
 .legenda {
     display: flex;
     gap: 24px;
