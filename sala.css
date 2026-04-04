@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #ed1c24;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 52px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+
+nav ul li {
+    border: 1px solid white;
+    margin-left: -1px;
+    display: flex;
+    align-items: stretch;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 30px 0 20px;
+}
+
+.sala-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.sala-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.sala-right {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.film-info {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.film-naziv {
+    margin: 0 0 6px 0;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.film-detalji {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.95rem;
+    color: #444;
+    flex-wrap: wrap;
+}
+
+.platno-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.platno {
+    display: inline-block;
+    background-color: #aaa;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    padding: 6px 0;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}
+
+.sala-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sala-grid {
+    display: grid;
+    grid-template-columns: 28px repeat(10, 40px);
+    gap: 6px;
+}
+
+.row-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+
+.slobodno    { background-color: #4caf50; }
+.zauzeto     { background-color: #f44336; }
+.rezervisano { background-color: #9e9e9e; }
+
+.col-numbers {
+    display: grid;
+    grid-template-columns: 28px repeat(10, 40px);
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.col-numbers span {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.legenda {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legenda-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.15);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.slobodno-box    { background-color: #4caf50; }
+.zauzeto-box     { background-color: #f44336; }
+.rezervisano-box { background-color: #9e9e9e; }
+
+.film-poster-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.film-poster-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.film-poster-info {
+    padding: 10px 8px;
+}
+
+.poster-title {
+    margin: 0 0 4px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.poster-duration {
+    margin: 0 0 2px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.poster-genre {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+@media (max-width: 800px) {
+    .sala-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sala-right {
+        width: 100%;
+        max-width: 200px;
+        order: -1; 
+    }
+
+    .sala-left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .sala-wrapper {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .sala-grid,
+    .col-numbers {
+        min-width: 460px;
+    }
+}
+
+@media (max-width: 600px) {
+    header { position: static; }
+    .header-content { flex-direction: column; align-items: stretch; }
+    .logo { justify-content: center; padding: 12px; }
+    nav ul { flex-direction: column; }
+    nav ul li { margin-left: 0; border-left: none; border-right: none; border-top: none; }
+    nav ul li:first-child { border-top: 1px solid white; }
+    nav ul li a { padding: 14px 20px; justify-content: center; }
+
+    .film-naziv { font-size: 1.4rem; }
+}
