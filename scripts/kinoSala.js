@@ -18,6 +18,10 @@ function validirajPodatke(podaci) {
     const dozvoljeniStatusi = ["slobodno", "zauzeto", "rezervisano"];
 
     for (let projekcija of podaci.projekcije) {
+        if (!projekcija.sjedista || projekcija.sjedista.length === 0) {
+            return false;
+        }
+
         for (let sjediste of projekcija.sjedista) {
             if (!dozvoljeniStatusi.includes(sjediste.status)) {
                 return false;
@@ -30,6 +34,8 @@ function validirajPodatke(podaci) {
 
 function prikaziSalu(podaci) {
     const salaDiv = document.getElementById("sala");
+
+    if (!salaDiv) return;
 
     if (!validirajPodatke(podaci)) {
         salaDiv.innerHTML = "<h2>Podaci nisu validni!</h2>";
@@ -49,18 +55,10 @@ function prikaziSalu(podaci) {
     right.className = "sala-right";
 
     left.innerHTML = `
-        <div class="film-info">
-            <h1 class="film-naziv">${projekcija.film}</h1>
-            <p class="film-detalji">
-                <span>Vrijeme projekcije: <strong>${projekcija.vrijeme}h</strong></span>
-                <span>Broj sale: <strong>${trenutnaProjekcija + 1}</strong></span>
-            </p>
-        </div>
-
-        <div class="platno-wrapper">
-            <div class="platno">PLATNO</div>
-        </div>
-    `;
+    <div class="platno-wrapper">
+        <div class="platno">PLATNO</div>
+    </div>
+`;
 
     const salaWrapper = document.createElement("div");
     salaWrapper.className = "sala-wrapper";
@@ -78,7 +76,9 @@ function prikaziSalu(podaci) {
         salaGrid.appendChild(label);
 
         for (let i = 1; i <= maxBroj; i++) {
-            const sjediste = projekcija.sjedista.find(s => s.red === red && s.broj === i);
+            const sjediste = projekcija.sjedista.find(
+                s => s.red === red && s.broj === i
+            );
 
             const seatDiv = document.createElement("div");
             seatDiv.className = "seat";
@@ -105,7 +105,7 @@ function prikaziSalu(podaci) {
     colNumbers.className = "col-numbers";
 
     const spacer = document.createElement("span");
-    spacer.className = "col-label-spacer";
+    spacer.textContent = "";
     colNumbers.appendChild(spacer);
 
     for (let i = 1; i <= maxBroj; i++) {
@@ -157,15 +157,15 @@ function prikaziSalu(podaci) {
     left.appendChild(navigacija);
 
     right.innerHTML = `
-        <div class="film-poster-card">
-            <img src="https://via.placeholder.com/200x280?text=Film" alt="Poster filma">
-            <div class="film-poster-info">
-                <p class="poster-title">${projekcija.film}</p>
-                <p class="poster-duration">${projekcija.vrijeme}</p>
-                <p class="poster-genre">PROJEKCIJA</p>
-            </div>
+    <div class="film-poster-card">
+        <img src="${projekcija.poster}" alt="${projekcija.film}">
+        <div class="film-poster-info">
+            <p class="poster-title">${projekcija.film}</p>
+            <div class="poster-meta-box">Vrijeme projekcije: ${projekcija.vrijeme}</div>
+            <div class="poster-meta-box">Broj sale: ${projekcija.sala}</div>
         </div>
-    `;
+    </div>
+`;
 
     layout.appendChild(left);
     layout.appendChild(right);

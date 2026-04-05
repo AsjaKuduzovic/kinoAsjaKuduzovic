@@ -3,6 +3,8 @@ const podaci = {
         {
             film: "F1: The Movie",
             vrijeme: "20:00",
+            sala: 1,
+            poster: "https://m.media-amazon.com/images/M/MV5BNGI0MDI4NjEtOWU3ZS00ODQyLWFhYTgtNGYxM2ZkM2Q2YjE3XkEyXkFqcGc@._V1_.jpg",
             sjedista: generisiSjedista([
                 ["A", 1, "zauzeto"], ["A", 2, "slobodno"], ["A", 3, "slobodno"], ["A", 4, "zauzeto"], ["A", 5, "slobodno"],
                 ["A", 6, "slobodno"], ["A", 7, "zauzeto"], ["A", 8, "slobodno"], ["A", 9, "rezervisano"], ["A", 10, "slobodno"],
@@ -32,6 +34,8 @@ const podaci = {
         {
             film: "Iron Man 3",
             vrijeme: "18:00",
+            sala: 2,
+            poster: "https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_FMjpg_UX1000_.jpg",
             sjedista: generisiSjedista([
                 ["A", 1, "slobodno"], ["A", 2, "slobodno"], ["A", 3, "zauzeto"], ["A", 4, "slobodno"], ["A", 5, "rezervisano"],
                 ["B", 1, "slobodno"], ["B", 2, "zauzeto"], ["B", 3, "slobodno"], ["B", 4, "slobodno"], ["B", 5, "zauzeto"],
@@ -41,10 +45,34 @@ const podaci = {
         {
             film: "Scarface",
             vrijeme: "21:30",
+            sala: 3,
+            poster: "https://upload.wikimedia.org/wikipedia/en/7/71/Scarface_-_1983_film.jpg",
             sjedista: generisiSjedista([
                 ["A", 1, "zauzeto"], ["A", 2, "zauzeto"], ["A", 3, "slobodno"], ["A", 4, "slobodno"], ["A", 5, "slobodno"],
                 ["B", 1, "slobodno"], ["B", 2, "rezervisano"], ["B", 3, "slobodno"], ["B", 4, "zauzeto"], ["B", 5, "slobodno"],
                 ["C", 1, "slobodno"], ["C", 2, "slobodno"], ["C", 3, "slobodno"], ["C", 4, "zauzeto"], ["C", 5, "rezervisano"]
+            ])
+        },
+        {
+            film: "Red",
+            vrijeme: "17:15",
+            sala: 4,
+            poster: "https://m.media-amazon.com/images/M/MV5BMzg2Mjg1OTk0NF5BMl5BanBnXkFtZTcwMjQ4MTA3Mw@@._V1_.jpg",
+            sjedista: generisiSjedista([
+                ["A", 1, "slobodno"], ["A", 2, "zauzeto"], ["A", 3, "slobodno"], ["A", 4, "rezervisano"], ["A", 5, "slobodno"],
+                ["B", 1, "slobodno"], ["B", 2, "slobodno"], ["B", 3, "zauzeto"], ["B", 4, "slobodno"], ["B", 5, "slobodno"],
+                ["C", 1, "rezervisano"], ["C", 2, "slobodno"], ["C", 3, "slobodno"], ["C", 4, "zauzeto"], ["C", 5, "slobodno"]
+            ])
+        },
+        {
+            film: "Luca",
+            vrijeme: "16:00",
+            sala: 5,
+            poster: "https://m.media-amazon.com/images/M/MV5BMWMyNGNlZTktODVkNS00ZmMyLTk0NmUtNWVjOWU1MWMzZGMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+            sjedista: generisiSjedista([
+                ["A", 1, "slobodno"], ["A", 2, "slobodno"], ["A", 3, "rezervisano"], ["A", 4, "zauzeto"], ["A", 5, "slobodno"],
+                ["B", 1, "zauzeto"], ["B", 2, "slobodno"], ["B", 3, "slobodno"], ["B", 4, "slobodno"], ["B", 5, "rezervisano"],
+                ["C", 1, "slobodno"], ["C", 2, "zauzeto"], ["C", 3, "slobodno"], ["C", 4, "slobodno"], ["C", 5, "slobodno"]
             ])
         }
     ]

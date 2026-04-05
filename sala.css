@@ -308,3 +308,29 @@ button {
 button:hover {
     background-color: #c5161d;
 }
+#sala {
+    min-height: 400px;
+}
+.seat {
+    cursor: pointer;
+}
+.poster-title {
+    margin: 0 0 12px 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #222;
+}
+
+.poster-meta-box {
+    border: 1px solid black;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    background-color: white;
+    text-align: center;
+}
+
+.film-poster-info {
+    padding: 14px 12px;
+}
