@@ -295,3 +295,16 @@ footer {
 
     .film-naziv { font-size: 1.4rem; }
 }
+button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #ed1c24;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c5161d;
+}
