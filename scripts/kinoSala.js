@@ -32,6 +32,38 @@ function validirajPodatke(podaci) {
     return true;
 }
 
+function ucitajRezervacije(podaci) {
+    const sacuvano = localStorage.getItem("kinoRezervacije");
+    if (!sacuvano) return;
+
+    const rezervacije = JSON.parse(sacuvano);
+
+    rezervacije.forEach(r => {
+        const projekcija = podaci.projekcije[r.projekcijaIndex];
+        if (!projekcija) return;
+        const sjediste = projekcija.sjedista.find(
+            s => s.red === r.red && s.broj === r.broj
+        );
+        if (sjediste && sjediste.status === "slobodno") {
+            sjediste.status = "rezervisano";
+        }
+    });
+}
+
+function sacuvajRezervaciju(projekcijaIndex, red, broj) {
+    const sacuvano = localStorage.getItem("kinoRezervacije");
+    const rezervacije = sacuvano ? JSON.parse(sacuvano) : [];
+
+    const vecPostoji = rezervacije.some(
+        r => r.projekcijaIndex === projekcijaIndex && r.red === red && r.broj === broj
+    );
+
+    if (!vecPostoji) {
+        rezervacije.push({ projekcijaIndex, red, broj });
+        localStorage.setItem("kinoRezervacije", JSON.stringify(rezervacije));
+    }
+}
+
 function prikaziSalu(podaci) {
     const salaDiv = document.getElementById("sala");
 
@@ -90,6 +122,7 @@ function prikaziSalu(podaci) {
                 seatDiv.addEventListener("click", function () {
                     if (sjediste.status === "slobodno") {
                         sjediste.status = "rezervisano";
+                        sacuvajRezervaciju(trenutnaProjekcija, red, i);
                         prikaziSalu(podaci);
                     }
                 });

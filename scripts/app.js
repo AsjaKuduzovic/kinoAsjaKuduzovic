@@ -157,5 +157,5 @@ const podaci = {
         }
     ]
 };
-
+ucitajRezervacije(podaci);
 prikaziSalu(podaci);
